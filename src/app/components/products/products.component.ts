@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import {
   Product,
@@ -15,9 +15,10 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
+  @Input() products: Product[] = [];
+  @Output() loadMore = new EventEmitter()
   myShoppingCart: Product[] = [];
   total = 0;
-  @Input() products: Product[] = [];
   showProductDetail = false;
   productChosen: Product | null = null;
   statusDetail: 'loading' | 'success' | 'error' | 'init' = 'init';
@@ -95,10 +96,8 @@ export class ProductsComponent {
     }
   }
 
-  // loadMore() {
-  //   this.productsService.getAll(this.limit, this.offset).subscribe((data) => {
-  //     this.products = this.products.concat(data);
-  //     this.offset += this.limit;
-  //   });
-  // }
+  onLoadMore() {
+    this.loadMore.emit()
+  }
+
 }

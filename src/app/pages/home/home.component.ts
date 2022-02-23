@@ -24,4 +24,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  onLoadMore() {
+    this.productsService.getAll(this.limit, this.offset).subscribe((data) => {
+      this.products = this.products.concat(data);
+      this.offset += this.limit;
+    });
+  }
+
 }

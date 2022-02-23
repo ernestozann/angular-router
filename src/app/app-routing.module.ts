@@ -26,6 +26,11 @@ const routes: Routes = [
   },
   {
     path: 'category',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'category/:id',
     component: CategoryComponent
   },
   {
