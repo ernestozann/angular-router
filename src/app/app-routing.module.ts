@@ -25,11 +25,6 @@ const routes: Routes = [
     component: NotFoundComponent
   },
   {
-    path: 'category',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
     path: 'category/:id',
     component: CategoryComponent
   },
@@ -53,6 +48,10 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent
   },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 
 ];
 
