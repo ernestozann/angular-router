@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StoreService } from '../../services/store.service'
-import { AuthService } from '../../services/auth.service';
+import { StoreService } from '../../../services/store.service'
+import { AuthService } from '../../../services/auth.service';
 import { CategoriesService } from 'src/app/services/categories.service';
-import { User } from '../../models/user.model';
+import { User } from '../../../models/user.model';
 import { Category } from 'src/app/models/category.model';
 
 @Component({
