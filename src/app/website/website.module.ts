@@ -15,6 +15,7 @@ import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     CommonModule,
     WebsiteRoutingModule,
     SwiperModule,
-    SharedModule
+    SharedModule,
+    QuicklinkModule,
   ]
 })
 export class WebsiteModule { }
